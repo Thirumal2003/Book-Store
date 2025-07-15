@@ -1,7 +1,7 @@
 
 # 📖 The Reading Room
 
-**The Reading Room** is a vibrant and engaging online bookstore project built with HTML and CSS. It features multiple book categories, detailed book listings, a responsive layout, and an integrated contact and order form to enhance user interaction.
+**The Reading Room** is a vibrant and engaging online bookstore project built with HTML CSS and JS. It features multiple book categories, detailed book listings, a responsive layout, and an integrated contact and order form to enhance user interaction.
 
 ---
 
@@ -41,6 +41,7 @@
 
 - HTML5
 - CSS3 (Flexbox, Grid, Animations)
+- JavaScript
 - Google Fonts & Emojis
 - Responsive Media Queries
 
