@@ -113,7 +113,7 @@
         </section><br><br>
         <!-- Novel  -->
         <section id="novels" class="novels container">
-            <h3 class="topic"style="margin-left: 47%;">Novels</h3>
+            <h3 class="topic" style="margin-left: 47%;">Novels</h3>
             <div class="book-grid">
                 <div class="book">
                     <img src="./img/nb1.jpeg" alt="Sapiens" height="100" width="100">
@@ -154,7 +154,7 @@
         </section><br><br>
         <!-- kids  -->
         <section id="kids" class="kids container">
-            <h3 class="topic"style="margin-left: 48%;">Kids</h3>
+            <h3 class="topic" style="margin-left: 48%;">Kids</h3>
             <div class="book-grid">
                 <div class="book">
                     <img src="./img/kb1.jpeg" alt="Sapiens" height="100" width="100">
@@ -318,40 +318,46 @@
         </section>
     </section><br><br>
     <!-- form  -->
+     <div class="container1">
+    <div class="left">
+      Tell about your favorite book and then say the name of your favorite book <br><br><br><br>
+    </div>
+    <div class="right">
     <section class="order-form container" style=" background-image: linear-gradient(20deg,red,yellow,green);">
         <h2 class="section-heading" style="text-align: center;">Fill this form</h2><br>
         <form>
             <div class="form-group">
                 <label for="name">Full Name<span>*</span></label>
-                <input type="text" id="name" placeholder="Enter your full name" required>
+                <input type="text" id="i1" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Email Address<span>*</span></label>
-                <input type="email" id="email" placeholder="Enter your email" required>
+                <input type="email" id="i2" required>
             </div>
 
             <div class="form-group">
                 <label for="phone">Phone Number<span>*</span></label>
-                <input type="tel" id="phone" placeholder="9123654780" required>
+                <input type="tel" id="i3" required>
             </div>
 
             <div class="form-group">
                 <label for="address">Delivery Address<span>*</span></label>
-                <textarea id="address" rows="3" placeholder="Enter full address" required></textarea>
+                <textarea id="i4" rows="3" required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="book">Book Title of Intrest<span>*</span></label>
-                <input type="text" id="book" placeholder="Which book do you want to order?" required>
+                <input type="text" id="i5" required>
             </div>
-<br>
+            <br>
             <div style="margin-left: 30%;">
-                <input class="order-btn" style="margin-right: 20px;" type="submit" value="Submit">
+                <input class="order-btn" style="margin-right: 20px;" type="submit" onclick="validate(event)"
+                    value="Submit">
                 <input class="order-btn" style="margin-right: 20px;" type="reset" value="Reset">
             </div>
         </form>
-    </section>
+    </section></div></div>
     <!-- bar section  -->
     <div class="info-section">
         <div class="info-box">
@@ -381,6 +387,37 @@
     <footer>
         <p>© 2025 Reading Room. All rights reserved.</p>
     </footer>
+
+    <script>
+        function validate(event) {
+            event.preventDefault();
+            var name = document.getElementById("i1").value;
+            var email = document.getElementById("i2").value;
+            var Numx = document.getElementById("i3").value;
+            var add = document.getElementById("i4").value;
+            var intrest = document.getElementById("i5").value;
+
+            const alpha = /^[A-Za-z\s]+$/;
+            const emails = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+$/;
+            const Numbers = /^[0-9]{10}$/;
+            const address = /^[a-zA-Z0-9\s,.-]+$/;
+
+
+            if (name == "") { alert("Please Enter Your Name"); }
+            else if (!alpha.test(name)) { alert("Use only Char For Your Name"); }
+            if (email == "") { alert("Please Enter your valid email"); }
+            else if (!emails.test(email)) { alert("use the number char and special char for email"); }
+            if (Numx == "") { alert("Please Enter your number"); }
+            else if (!Numbers.test(Numx)) { alert("Use only numbers for your number "); }
+            if (add == "") { alert("Please Enter valid address"); }
+            else if (!address.test(add)) { alert("Use only Char and number for address"); }
+            if (intrest == "") { alert("Please Enter Your Name"); }
+            else if (!alpha.test(intrest)) { alert("Use only Char For Your Name"); }
+            else {
+                alert("Success!");
+            }
+        }
+    </script>
 </body>
 
 </html>
